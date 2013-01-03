@@ -15,11 +15,6 @@ class Post
     private $id;
 
     /**
-     * @var string $name
-     */
-    private $name;
-
-    /**
      * @var \DateTime $entered
      */
     private $entered;
@@ -35,28 +30,6 @@ class Post
         return $this->id;
     }
 
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return Post
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 
     /**
      * Set entered
