@@ -4,7 +4,7 @@ parameters:
     database_port:     ~
     database_name:     symm
     database_user:     root
-    database_password: jlk2436
+    database_password: ~
 
     mailer_transport:  smtp
     mailer_host:       localhost
