@@ -6,135 +6,48 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Blog\BlogBundle\Entity\Post
+ *
+ * @ORM\Table(name="Post")
+ * @ORM\Entity
  */
 class Post
 {
     /**
      * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @var \DateTime $entered
-     */
-    private $entered;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-
-    /**
-     * Set entered
-     *
-     * @param \DateTime $entered
-     * @return Post
-     */
-    public function setEntered($entered)
-    {
-        $this->entered = $entered;
-    
-        return $this;
-    }
-
-    /**
-     * Get entered
-     *
-     * @return \DateTime 
-     */
-    public function getEntered()
-    {
-        return $this->entered;
-    }
-    /**
      * @var string $fname
+     *
+     * @ORM\Column(name="fname", type="string", length=255, nullable=false)
      */
     private $fname;
 
     /**
      * @var string $lname
+     *
+     * @ORM\Column(name="lname", type="string", length=255, nullable=false)
      */
     private $lname;
 
-
     /**
-     * Set fname
+     * @var \DateTime $entered
      *
-     * @param string $fname
-     * @return Post
+     * @ORM\Column(name="entered", type="datetime", nullable=false)
      */
-    public function setFname($fname)
-    {
-        $this->fname = $fname;
-    
-        return $this;
-    }
+    private $entered;
 
-    /**
-     * Get fname
-     *
-     * @return string 
-     */
-    public function getFname()
-    {
-        return $this->fname;
-    }
-
-    /**
-     * Set lname
-     *
-     * @param string $lname
-     * @return Post
-     */
-    public function setLname($lname)
-    {
-        $this->lname = $lname;
-    
-        return $this;
-    }
-
-    /**
-     * Get lname
-     *
-     * @return string 
-     */
-    public function getLname()
-    {
-        return $this->lname;
-    }
     /**
      * @var string $comment
+     *
+     * @ORM\Column(name="comment", type="string", length=255, nullable=false)
      */
     private $comment;
 
 
-    /**
-     * Set comment
-     *
-     * @param string $comment
-     * @return Post
-     */
-    public function setComment($comment)
-    {
-        $this->comment = $comment;
-    
-        return $this;
-    }
-
-    /**
-     * Get comment
-     *
-     * @return string 
-     */
-    public function getComment()
-    {
-        return $this->comment;
-    }
 }
